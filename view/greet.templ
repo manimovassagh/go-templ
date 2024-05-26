@@ -12,8 +12,10 @@ var Items = []Item{
 }
 var greeting = "Welcome!"
 templ Comp(name string) {
+
 	<div>This is a component and {greeting} to {name}</div>
 	<h1>This {greeting} is coming from some ordinary file baby</h1>
+     @Stick("Sahar")
 	  <ul>
       for _, item := range Items {
         <li>{ item.Name }</li>
