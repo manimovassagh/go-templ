@@ -1,0 +1,9 @@
+package main
+
+import "github.com/manimovassagh/go-templ/view"
+
+templ Hello(name string) {
+
+@view.Comp("Mani")
+	<div>Hello, { name }</div>
+}
