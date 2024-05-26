@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	component := Hello("John")
 	err := component.Render(context.Background(), os.Stdout)
 	if err != nil {
