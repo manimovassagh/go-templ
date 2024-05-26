@@ -12,6 +12,18 @@ import "bytes"
 
 import "github.com/manimovassagh/go-templ/view"
 
+type Item struct {
+	ID    int
+	Name  string
+	Price string
+}
+
+var Items = []Item{
+	{ID: 1, Name: "Item1", Price: "10.0"},
+	{ID: 2, Name: "Item2", Price: "20.0"},
+	{ID: 3, Name: "Item3", Price: "30.0"},
+}
+
 func Hello(name string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
@@ -36,7 +48,7 @@ func Hello(name string) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(name)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `hello.templ`, Line: 8, Col: 19}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `hello.templ`, Line: 17, Col: 19}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {

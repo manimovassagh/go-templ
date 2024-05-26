@@ -1,15 +1,15 @@
 package view
 
-	type Item struct {
-		ID    int
-		Name  string
-		Price string
-	}
-	var Items = []Item{
-		{ID: 1, Name: "Item1", Price: "10.0"},
-		{ID: 2, Name: "Item2", Price: "20.0"},
-		{ID: 3, Name: "Item3", Price: "30.0"},
-	}
+type Item struct {
+ID    int
+Name  string
+Price string
+}
+var Items = []Item{
+{ID: 1, Name: "Item1", Price: "10.0"},
+{ID: 2, Name: "Item2", Price: "20.0"},
+{ID: 3, Name: "Item3", Price: "30.0"},
+}
 var greeting = "Welcome!"
 templ Comp(name string) {
 	<div>This is a component and {greeting} to {name}</div>
