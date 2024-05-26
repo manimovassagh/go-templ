@@ -1,3 +1,4 @@
 <div>This is a component and 
  to 
-</div>
+</div><h1>This 
+ is coming from some ordinary file baby</h1>
